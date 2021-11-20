@@ -23,7 +23,4 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
     for i in range(0, detections.shape[2]):
         confidence = detections[0, 0, i, 2]
         if confidence > 0.5:
-            box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
-            (startX, startY, endX, endY) = box.astype("int")
-            (startX, startY) = (max(0, startX), max(0, startY))
-            (endX, endY) = (min(w - 1, endX), min(h - 1, endY))
+            box = detections[0, 0, i, 3:7] * np.array([])

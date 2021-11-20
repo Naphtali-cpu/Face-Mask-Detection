@@ -27,3 +27,4 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
             (startX, startY, endX, endY) = box.astype("int")
             (startX, startY) = (max(0, startX), max(0, startY))
             (endX, endY) = (min(w - 1, endX), min(h - 1, endY))
+            fac
