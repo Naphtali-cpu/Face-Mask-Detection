@@ -74,9 +74,5 @@ while True:
     cv2.imshow("Frame", frame)
     key = cv2.waitKey(1) & 0*FF
 
-    if key == ord("q"):
-        break
-
-cv2.destroyAllWindows()
-vs.stop()
+    if key == ord("")
 
