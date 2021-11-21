@@ -60,6 +60,4 @@ while True:
 
     for(box, pred) in zip(locs, preds):
         (startX, startY, endX, endY) = box
-        (mask, withoutMask) = pred
-
-        
+        (mask, without)

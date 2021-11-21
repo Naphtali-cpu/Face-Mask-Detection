@@ -43,23 +43,4 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
         
     return (locs, preds)
 
-prototxtPath = r"face.detector\deploy.prototxt"
-weightsPath = r"face.detector\res10_300*300_ssd_iter_140000.caffemodel"
-faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
-
-maskNet = load_model("mask_detector.model")
-
-print("[INFO] starting video stream...")
-vs = VideoStream(src=0).start()
-
-while True:
-    frame = vs.read()
-    frame = imutils.resize(frame, width=400)
-
-    (locs, preds) = detect_and_predict_mask(frame, faceNet, maskNet)
-
-    for(box, pred) in zip(locs, preds):
-        (startX, startY, endX, endY) = box
-        (mask, withoutMask) = pred
-
-        
+prototxtPath
