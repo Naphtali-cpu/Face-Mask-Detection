@@ -41,4 +41,3 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
         faces = np.array(faces, dtype="float32")
         preds = maskNet.predict(faces, batch_size=32)
         
-    return (locs, preds)

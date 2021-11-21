@@ -32,13 +32,4 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
             face = img_to_array(face)
             face = preprocess_input(face)
 
-            faces.append(face)
-            locs.append((startX, startY, endX, endY))
-
-    
-    if len(faces) > 0:
-
-        faces = np.array(faces, dtype="float32")
-        preds = maskNet.predict(faces, batch_size=32)
-        
-    return (locs, preds)
+            faces.app
