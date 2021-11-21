@@ -62,6 +62,5 @@ while True:
         (startX, startY, endX, endY) = box
         (mask, withoutMask) = pred
 
-        label = "Mask" if mask > withoutMask else "No Mask"
-        color = (0, 255, 0) if label == "Mask" else (0, 0,255)
+        label = "Mask" if mask > with
 
